@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <!-- Font Cantik -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Ikon Sosial Media -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+
+
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('foto-ono-niha-nias.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, rgba(255,182,193,0.85), rgba(173,216,230,0.85));
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 5px solid #fff;
+    }
+
+    /* Animasi keren untuk tulisan Portofolio */
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin: 0;
+      background: linear-gradient(90deg, #161616, #ff0000, #ff00bb, #4000ff);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGlow 4s linear infinite, textPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes textGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes textPulse {
+      0%, 100% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #fff; }
+      50% { text-shadow: 0 0 20px #87ceeb, 0 0 40px #fff; }
+    }
+
+    .foto-mahasiswa img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin-top: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .foto-mahasiswa img:hover {
+      transform: scale(1.05);
+    }
+
+    .identitas {
+      margin-top: 15px;
+      color: #fff;
+    }
+
+    /* Kotak nama bergerak */
+    .name-box {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 10px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #ff69b4, #fff, #87ceeb);
+      background-size: 200% 100%;
+      animation: moveBox 4s linear infinite;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    @keyframes moveBox {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav {
+      background-color: rgba(255, 192, 203, 0.9);
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav a {
+      color: #333;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover { color: #ff69b4; }
+
+    .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: #333; }
+    .menu-links { display: inline-block; }
+
+    section {
+      background-color: rgba(255,255,255,0.85);
+      margin: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff69b4;
+      padding-bottom: 5px;
+      color: #ff69b4;
+    }
+
+    footer {
+      background: linear-gradient(135deg, rgba(255,182,193,0.9), rgba(173,216,230,0.9));
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      margin: 0 12px;
+      font-size: 1.8em;
+      text-shadow: 0 0 12px #fff, 0 0 20px #ff69b4;
+      transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #ff69b4;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff69b4;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(255, 192, 203, 0.95);
+        padding: 10px;
+        animation: slideIn 0.5s ease forwards;
+      }
+      .menu-links a { margin: 10px 0; display: block; }
+      .menu-links.active { display: flex; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portofolio</h1>
+    <div class="foto-mahasiswa">
+      <img src="fp.jpeg" alt="Foto Mahasiswi">
+    </div>
+    <div class="identitas">
+      <div class="name-box">Methildis Zalukhu </div>
+    </div>
+  </header>
+
+  <nav>
+    <span class="menu-toggle"><i class="fas fa-bars"></i></span>
+    <div class="menu-links">
+      <a href="#tentang">Tentang Saya</a>
+      <a href="#pendidikan">Pendidikan</a>
+      <a href="#pengalaman">Pengalaman</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswi Administrasi Negara yang sedang menempuh pendidikan dengan penuh semangat yang Berasal dari Nias Utara, Sumatera Utara, saya ingin mengembangkan pengetahuan dan keterampilan di bidang Administrasi Negara untuk masa depan.</p>
+  </section>
+
+  <section id="pendidikan">
+    <h2>Pendidikan</h2>
+    <ul>
+      <li>S1 Administrasi Negara - Universitas Pattimura (Sedang Menempuh) </li>
+      
+    </ul>
+  </section>
+
+  <section id="pengalaman">
+    <h2>Pengalaman</h2>
+    <ul>
+      <li>Organisasi Internal & Eksternal Kampus</li>
+      <li>Kegiatan Akademik / Non-akademik</li>
+      <li>Proyek / Penelitian kecil (dari dosen)</li>
+    </ul>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <div class="social-icons">
+      <a href="https://wa.me/6285184218841" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://instagram.com/Methildiszalukhu" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/Methildis Zalukhu" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Portofolio Methildis Zalukhu</p>
+  </footer>
+
+  <script
